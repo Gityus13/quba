@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Quba-Guba | Azerbaijan's Hidden Gem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/a8/8d/c8/quba-palace-hotel.jpg?w=1100&h=-1&s=1');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .slide-up {
+            animation: slideUp 1s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #f59e0b, #ef4444);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-gray-900 flex items-center">
+                        <i class="fas fa-mountain text-amber-500 mr-2"></i>
+                        <span class="gradient-text">Visit Quba</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-amber-500 transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-amber-500 transition">About</a>
+                    <a href="#attractions" class="text-gray-700 hover:text-amber-500 transition">Attractions</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-amber-500 transition">Gallery</a>
+                    <a href="#contact" class="text-gray-700 hover:text-amber-500 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 hover:text-amber-500 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4 shadow-lg">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-amber-500 transition">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-amber-500 transition">About</a>
+            <a href="#attractions" class="block py-2 text-gray-700 hover:text-amber-500 transition">Attractions</a>
+            <a href="#gallery" class="block py-2 text-gray-700 hover:text-amber-500 transition">Gallery</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-amber-500 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero flex items-center justify-center text-center text-white fade-in">
+        <div class="container px-4 mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 slide-up">Discover <span class="gradient-text">Quba</span></h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto slide-up">The hidden gem of Azerbaijan where mountains meet tradition</p>
+            <div class="slide-up">
+                <a href="#about" class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-semibold px-6 py-3 rounded-full transition transform hover:scale-105">
+                    Explore More <i class="fas fa-arrow-down ml-2"></i>
+                </a>
+            </div>
+            <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+                <a href="#about" class="text-white animate-bounce">
+                    <i class="fas fa-chevron-down text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">About Quba</h2>
+                <div class="w-20 h-1 bg-amber-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">A picturesque region in northeastern Azerbaijan known for its stunning landscapes and rich cultural heritage</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative overflow-hidden rounded-xl shadow-xl">
+                    <img src="https://eratur.az/uploads/posts/2025-07/1753104453_quba-1.jpg" 
+                         alt="Quba landscape" 
+                         class="w-full h-auto transition duration-500 hover:scale-110">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">The Heart of Azerbaijan's Mountain Culture</h3>
+                    <p class="text-gray-600 mb-6">Quba is a breathtaking region located in the northeastern part of Azerbaijan, nestled between the majestic Caucasus Mountains and the Caspian Sea. This area is renowned for its pristine nature, traditional villages, and the warm hospitality of its people.</p>
+                    <p class="text-gray-600 mb-6">The region boasts a unique microclimate that creates perfect conditions for growing delicious fruits, particularly apples and pears that Quba is famous for throughout Azerbaijan.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-mountain text-amber-500 text-2xl mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Mountain Views</h4>
+                                <p class="text-sm text-gray-600">Stunning Caucasus peaks</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-utensils text-amber-500 text-2xl mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Local Cuisine</h4>
+                                <p class="text-sm text-gray-600">Authentic Azerbaijani dishes</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-tree text-amber-500 text-2xl mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Nature</h4>
+                                <p class="text-sm text-gray-600">Lush forests and rivers</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-history text-amber-500 text-2xl mr-3"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800">History</h4>
+                                <p class="text-sm text-gray-600">Ancient traditions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Section -->
+    <section class="parallax h-96 flex items-center justify-center" style="background-image: url('https://cdn5.travelconline.com/images/fit-in/2000x0/filters:quality(75):strip_metadata():format(webp)/https%3A%2F%2Fphotos.hotelbeds.com%2Fgiata%2Foriginal%2F65%2F655741%2F655741a_hb_a_002.jpg');">
+        <div class="text-center px-4">
+            <h2 class="text-4xl font-bold text-white mb-4">Experience the Magic of Quba</h2>
+            <p class="text-xl text-white max-w-2xl mx-auto">Where every season paints a new masterpiece across the landscape</p>
+        </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section id="attractions" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Must-See Attractions</h2>
+                <div class="w-20 h-1 bg-amber-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Discover the wonders that make Quba a unique destination</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://www.gwtc.az/wp-content/uploads/2021/11/121-1024x683-1.jpg" 
+                             alt="Khinalig Village" 
+                             class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Khinalig Village</h3>
+                        <p class="text-gray-600 mb-4">One of the highest and most ancient villages in the Caucasus, offering breathtaking views and unique cultural traditions.</p>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://azeritravel.az/wp-content/uploads/2018/04/Tangaalti-tour-in-Quba-Guba-azeritravel.az-3-1.jpg" 
+                             alt="Tenghi Canyon" 
+                             class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Tenghi Canyon</h3>
+                        <p class="text-gray-600 mb-4">Often called "Azerbaijan's Grand Canyon," this natural wonder features dramatic rock formations and stunning vistas.</p>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://www.azernews.az/media/pictures/qubaalma2_1.jpg" 
+                             alt="Guba Apple Orchards" 
+                             class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Apple Orchards</h3>
+                        <p class="text-gray-600 mb-4">Visit the famous orchards of Quba, where you can pick fresh apples and learn about traditional farming methods.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Gallery</h2>
+                <div class="w-20 h-1 bg-amber-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">A visual journey through Quba's stunning landscapes and vibrant culture</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://www.travelaze.com/wp-content/uploads/2019/03/Juma_Mosque_of_Quba.jpg" 
+                         alt="Quba-Guba landscape" 
+                         class="w-full h-48 object-cover transition duration-500 hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://finss.az/photo/620x400/2025/05/19/1747647502_quba.jpg" 
+                         alt="Quba-Guba village" 
+                         class="w-full h-48 object-cover transition duration-500 hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi5q0lCL9eFXDMeg2XXSFNNfE4zX1lkz0aoQ&s" 
+                         alt="Quba-Guba mountains" 
+                         class="w-full h-48 object-cover transition duration-500 hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://silkrow.az/media/2022/02/24/quba-palace-hotel_(1)_logo.jpg" 
+                         alt="Quba-Guba river" 
+                         class="w-full h-48 object-cover transition duration-500 hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://sia.az/storage/2019/07/15/600_600_fixed.jpg" 
+                         alt="Quba-Guba autumn" 
+                         class="w-full h-48 object-cover transition duration-500 hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Quba_368.jpg" 
+                         alt="Quba-Guba flowers" 
+                         class="w-full h-48 object-cover transition duration-500 hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Quba-Guba forest" 
+                         class="w-full h-48 object-cover transition duration-500 hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=350,height=290/tour_img/0107fa78df141b3b476ff6f29b2c052fc80af23fa5a53e3fe50320f60c5066e8.jpg" 
+                         alt="Quba-Guba sunset" 
+                         class="w-full h-48 object-cover transition duration-500 hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Traveler Experiences</h2>
+                <div class="w-20 h-1 bg-amber-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">What visitors say about their journey to Quba</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md relative card-hover">
+                    <div class="absolute -top-6 -left-6 bg-amber-500 text-white w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fas fa-quote-left text-xl"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Quba exceeded all my expectations. The landscapes are breathtaking, and the local hospitality made me feel at home. The apple orchards are a must-visit!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-600">Travel Blogger, USA</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md relative card-hover">
+                    <div class="absolute -top-6 -left-6 bg-amber-500 text-white w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fas fa-quote-left text-xl"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The Tenghi Canyon was the highlight of our Azerbaijan trip. The colors of the rocks change throughout the day - absolutely magical place!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Michael Chen</h4>
+                            <p class="text-sm text-gray-600">Photographer, Canada</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md relative card-hover">
+                    <div class="absolute -top-6 -left-6 bg-amber-500 text-white w-12 h-12 rounded-full flex items-center justify-center">
+                        <i class="fas fa-quote-left text-xl"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Khinalig village is like stepping back in time. The ancient stone houses and the warm welcome from locals made this an unforgettable experience."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Elena Petrova" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Elena Petrova</h4>
+                            <p class="text-sm text-gray-600">Travel Writer, Russia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Plan Your Visit</h2>
+                <div class="w-20 h-1 bg-amber-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Get in touch for travel advice, guided tours, and accommodation recommendations</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-amber-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Location</h4>
+                                <p class="text-gray-600">Quba Azerbaijan</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-amber-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Phone</h4>
+                                <p class="text-gray-600">+994 50 549 9933</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-amber-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Email</h4>
+                                <p class="text-gray-600">info@visitquba.online</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-amber-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Tourist Information Center Hours</h4>
+                                <p class="text-gray-600">All time open</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <div class="flex space-x-4">
+            </div>
+                    </div>
+                </div>
+                
+                <div>
+                   <form class="bg-gray-50 p-8 rounded-xl shadow-md" action="https://formsubmit.co/info@visitquba.online" method="POST">
+    <h3 class="text-2xl font-bold mb-6 text-gray-800">Send Us a Message</h3>
+    
+    <!-- Add hidden fields for FormSubmit configuration -->
+    <input type="hidden" name="_subject" value="New message from contact form">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://cdn.optinmonster.com/wp-content/uploads/2016/10/Anatomy-of-the-Perfect-Thank-You-Page.png$0"> <!-- Replace with your thank you page -->
+    
+    <div class="mb-4">
+        <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+        <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+    </div>
+    <div class="mb-4">
+        <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+    </div>
+    <div class="mb-6">
+        <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"></textarea>
+    </div>
+    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold px-6 py-3 rounded-lg transition transform hover:scale-105">
+        Send Message <i class="fas fa-paper-plane ml-2"></i>
+    </button>
+</form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194473.18588939894!2d48.4127969!3d41.3641674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d40a035a261%3A0x97aafeec8395f987!2sQuba%2C%20Azerbaijan!5e0!3m2!1sen!2s!4v1689877728436!5m2!1sen!2s" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="text-xl font-bold flex items-center">
+                        <i class="fas fa-mountain text-amber-500 mr-2"></i>
+                        <span class="gradient-text">Quba</span>
+                    </a>
+                    <p class="mt-4 text-gray-400">Discover the hidden gem of Azerbaijan where mountains meet tradition and nature creates unforgettable experiences.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-amber-500 transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-amber-500 transition">About</a></li>
+                        <li><a href="#attractions" class="text-gray-400 hover:text-amber-500 transition">Attractions</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-amber-500 transition">Gallery</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-amber-500 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Popular Destinations</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-amber-500 transition">Khinalig Village</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-500 transition">Tenghi Canyon</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-500 transition">Apple Orchards</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-500 transition">Quba City Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-500 transition">Mountain Trails</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for travel tips and special offers.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full">
+                        <button type="submit" class="bg-amber-500 hover:bg-amber-600 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© 2025 Quba Tourism. All rights reserved.</p>
+                <p class="text-gray-400">Made by YU$AI, ADNAN, KAMUKA, ME$AI</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-amber-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to top button
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.slide-up, .fade-in');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Initialize animations
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Card hover effect
+        const cards = document.querySelectorAll('.card-hover');
+        
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const img = card.querySelector('img');
+                if (img) {
+                    img.style.transform = 'scale(1.1)';
+                }
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                const img = card.querySelector('img');
+                if (img) {
+                    img.style.transform = 'scale(1)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
