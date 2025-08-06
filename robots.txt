@@ -1,0 +1,45 @@
+# robots.txt for visitquba.online - optimized for Google, Bing, Yandex
+
+# Block outdated or unnecessary bots
+User-agent: Teoma
+Disallow: /
+
+User-agent: Gigabot
+Disallow: /
+
+User-agent: Robozilla
+Disallow: /
+
+User-agent: Nutch
+Disallow: /
+
+User-agent: ia_archiver  # Alexa / Wayback
+Disallow: /
+
+User-agent: baiduspider  # China
+Disallow: /
+
+User-agent: naverbot     # Korea
+Disallow: /
+
+User-agent: yeti         # Naver/Yeti
+Disallow: /
+
+User-agent: yahoo-mmcrawler
+Disallow: /
+
+User-agent: psbot        # Picsearch
+Disallow: /
+
+User-agent: yahoo-blogs/v3.9
+Disallow: /
+
+# ✅ Allow all modern search engines including:
+# - Google (Googlebot, Images, Mobile)
+# - Bing (MSNBot)
+# - Yandex (YandexBot)
+User-agent: *
+Allow: /
+
+# ✅ Sitemap for faster indexing
+Sitemap: https://visitquba.online/sitemap.xml
